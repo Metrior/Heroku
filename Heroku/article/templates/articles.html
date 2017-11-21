@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block article %}
+{% for article in articles %}
+    <h6>Date:{{ article.article_date }}</h6>
+    <h4><a href="/articles/get/{{ article.id }}">{{ article.article_title }}</a></h4>
+    <p>{{ article.article_text }}</p>
+    <p><a href="/articles/addlike/{{ article.id }}"> Likes:{{ article.article_likes }}</a></p>
+    <hr>
+{% endfor %}
+{% endblock %}

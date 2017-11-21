@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+<div class="top-bar">
+    <section class="top-bar-section">
+        <ul class="right">
+            {% if username %}
+                <li><a href="/auth/logout/">Exit {{ username }}</a> </li>
+            {% else %}
+                <li><a href="/auth/login/">Enter</a> </li>
+            {% endif %}
+        </ul>
+    </section>
+</div>
+{% block content %}{% endblock %}
+<h1>Blok</h1>
+{% block article %}{% endblock %}
+</body>
+</html>
